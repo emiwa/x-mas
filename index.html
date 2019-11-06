@@ -17,8 +17,8 @@ p {
 </style>
 </head>
 <body>
-<p id="demo"></p>
-<div class="bg"></div>
+<p id="xmas"></p>
+// <div class="bg"></div>
 
 <script>
 // Set the date we're counting down to
@@ -43,8 +43,8 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   var seconds2 = Math.floor((signUpDistance % (1000 * 60)) / 1000);
     
-  // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = "X-mas party starts in: " + days + "days " + hours + "hours "
+  // Output the result in an element with id="xmas"
+  document.getElementById("xmas").innerHTML = "X-mas party starts in: " + days + "days " + hours + "hours "
   + minutes + "minutes " + seconds + "seconds " +"<br>"+ "<br>"+ "Last sign up: " + days2 + "days " + hours2 + "hours "
   + minutes2 + "minutes " + seconds2 + "seconds ";
    document.body.style.backgroundImage = "url('christmas-party.jpg')";
@@ -52,13 +52,13 @@ var x = setInterval(function() {
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "PARTY TIME";
+    document.getElementById("xmas").innerHTML = "PARTY TIME";
     document.body.style.backgroundImage = "url('xmas_santa.jpg')";
   }
   
    if (signUpDistance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "Sign up has closed";
+    document.getElementById("xmas").innerHTML = "Sign up has closed";
     document.body.style.backgroundImage = "url('xmas_santa.jpg')";
   }
 }, 1000);
